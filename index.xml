@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="2.0">
+<title protocol="wap java">Financial Service</title>
+<navigation>
+<link accesskey="1" pageId="a01.xml">Welcome to Financial service</link>
+<link accesskey="2" pageId="a02.xml" protocol="ussd">Get WAP link</link>
+</navigation>
+</page>
