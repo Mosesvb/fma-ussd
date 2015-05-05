@@ -1,13 +1,16 @@
 <?php
-
+// echo $_GET['username'];
+// session_start();
 require_once 'configureCyclos.php';
-
 $accountService = new Cyclos\AccountService();
 $transactionService = new Cyclos\TransactionService();
 $transferService = new Cyclos\TransferService();
 
-$status = $transferService->getData('2695791069256474057');
-var_dump($status);
+// //salio
+$salio = $accountService->getAccountsSummary(array('username' => 'fredy.willium'),NULL);
+$balanceObj = $salio[0]->balance;
+echo $balanceObj->amount;
+// var_dump($balanceObj->amount);
 
 //load trans by number 2695791069256736201, 2695791069256342985
 // $status = $transactionService->load("2695791069257129417");

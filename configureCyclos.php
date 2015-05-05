@@ -9,4 +9,4 @@ function load($c) {
 spl_autoload_register('load'); 
 
 Cyclos\Configuration::setRootUrl("fungasha.j.layershift.co.uk/fungasha");
-Cyclos\Configuration::setAuthentication("wakashela", "kamugisha");
+Cyclos\Configuration::setAuthentication("wakashela", "1234");

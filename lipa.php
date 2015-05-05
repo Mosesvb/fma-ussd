@@ -11,7 +11,7 @@ Cyclos\Configuration::setAuthentication($_SESSION["phonenumber"], $_SESSION["pin
 
 $transactionService = new Cyclos\TransactionService();
 $paymentService     = new Cyclos\PaymentService();
-
+// 
 try {
 	$data = $transactionService->getPaymentData(
 		array('username' => $_SESSION["username"]),
@@ -26,7 +26,7 @@ try {
 
 	$paymentResult = $paymentService->perform($parameters);
 	if ($paymentResult->authorizationStatus == 'PENDING_AUTHORIZATION') {
-		// echo ("Not yet authorized\n");
+		echo ("Not yet authorized\n");
 		$_SESSION['muamala_msg'] = "Wewe Hauruhusiwi usirudie tena";
 	} else {
 		// echo ("Succesfull with id $paymentResult->id\n");
