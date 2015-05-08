@@ -24,7 +24,6 @@ print '<?xml version="1.0" encoding="UTF-8"?>';
 	// getBalance();
 ?>
 	<page version="2.0">
-		<title protocol="wap java">Salio  </title>
 		<div>
 			Salio la ankaunti yako ni <?php getBalance(); ?> Tsh
 		</div>
