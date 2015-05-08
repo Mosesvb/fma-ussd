@@ -8,7 +8,7 @@ print '<?xml version="1.0" encoding="UTF-8"?>';
 		$ch = curl_init();
 
 		// set URL and other appropriate options
-		curl_setopt($ch, CURLOPT_URL, "http://localhost/ussd/fungasha/all_in_one.php?username=".$_SESSION['username']);
+		curl_setopt($ch, CURLOPT_URL, "http://localhost/ussd/fungasha/salio_inc.php?username=".$_SESSION['username']);
 		curl_setopt($ch, CURLOPT_HEADER, 0);
 
 		// grab URL and pass it to the browser

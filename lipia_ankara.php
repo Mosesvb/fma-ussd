@@ -1,7 +1,8 @@
 <?php
-	// session_start();
+	session_start();
 	header('Content-Type: text/xml');
 	print '<?xml version="1.0" encoding="UTF-8"?>';
+	$_SESSION['username1'] = 'fredy';
 ?>
 <page version="2.0">
 <title protocol="wap java">Lipia Ankara</title>
@@ -19,7 +20,7 @@
 		}
 		$i = 1;
 		while (	$data = mysql_fetch_array($result)) {
-			echo '<link accesskey="'.$i.'" pageId="lipa'.$i.'.php" protocol="ussd"> Lipa '.$data['amount'].' Tsh kwenda '.$data[0].'</link>';
+			echo '<link accesskey="'.$i.'" pageId="lipa'.$i.'.php" protocol="ussd"> Lipa '.number_format($data['amount'],2,'.','').' Tsh kwenda '.$data[0].'</link>';
 			$i++;
 		}
 	?>

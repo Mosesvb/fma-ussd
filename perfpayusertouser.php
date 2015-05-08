@@ -6,6 +6,21 @@ Cyclos\Configuration::setAuthentication("0756738274", "1234");
 
 $transactionService = new Cyclos\TransactionService();
 $paymentService     = new Cyclos\PaymentService();
+$userService     = new Cyclos\UserService();
+
+try {
+	$query = new stdclass();
+	$query->username = 'fredy.willium' ;
+	$t = $userService->locate($query);
+	$_SESSION['userVo'] = $t;
+	// var_dump($t);
+} catch (Cyclos\ServiceException $e) {
+	if ($e->errorCode == "ENTITY_NOT_FOUND") {
+		echo("username does not exist");
+	}else{
+		echo("Error with code $e->errorCode while performing the usersearch \n");
+	}
+}
 
 try {
 	$data = $transactionService->getPaymentData(

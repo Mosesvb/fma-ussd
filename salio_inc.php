@@ -1,11 +1,12 @@
 <?php
-session_start();
-echo  $_SESSION["username"];
-echo(1);
-// require_once 'configureCyclos.php';
+require_once 'configureCyclos.php';
+$accountService = new Cyclos\AccountService();
+$transactionService = new Cyclos\TransactionService();
+$transferService = new Cyclos\TransferService();
 
-// $accountService = new Cyclos\AccountService();
-
-// $salio = $accountService->getAccountsSummary(array('username' => $_SESSION["username"] ),NULL);
-// $balanceObj = $salio[0]->balance;
-// echo $balanceObj->amount;
+// echo $_GET['username'];
+$salio = $accountService->getAccountsSummary(array('username' => $_GET['username']),NULL);
+$balanceObj = $salio[0]->balance;
+$balance = number_format($balanceObj->amount,2,'.','');
+echo $balance;
+?>

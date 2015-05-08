@@ -4,7 +4,7 @@ require_once 'configureCyclos.php';
 
 $userService = new Cyclos\UserService();
 $query = new stdclass();
-$query->keywords = 'wakashela*';
+$query->only_contacts = '0756738274';
 $query->pageSize = 5;
 $page = $userService->search($query);
 
