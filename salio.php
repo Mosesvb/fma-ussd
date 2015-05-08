@@ -29,7 +29,7 @@ print '<?xml version="1.0" encoding="UTF-8"?>';
 			Salio la ankaunti yako ni <?php getBalance(); ?> Tsh
 		</div>
 		<navigation>
-			<link accesskey="0" pageId="main_menu.php" type="back">Rudi Nyuma</link>
+			<link accesskey="0" pageId="index.xml" type="back">Rudi Nyuma</link>
 		</navigation>
 	</page>
 

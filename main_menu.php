@@ -38,6 +38,6 @@ print '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
 <!-- <title protocol="wap java">Menu</title> -->
 <page version="2.0">
-<title protocol="wap java">Send money</title>
+<title protocol="wap java">Menu</title>
 		<?php echo $menu?>
 </page>
