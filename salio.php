@@ -8,7 +8,7 @@ print '<?xml version="1.0" encoding="UTF-8"?>';
 		$ch = curl_init();
 
 		// set URL and other appropriate options
-		curl_setopt($ch, CURLOPT_URL, "http://interglobe.co.tz/ussd/salio_inc.php?username".$_SESSION['username']);
+		curl_setopt($ch, CURLOPT_URL, "http://interglobe.co.tz/ussd/salio_inc.php?username=".$_SESSION['username']);
 		curl_setopt($ch, CURLOPT_HEADER, 0);
 
 		// grab URL and pass it to the browser
@@ -24,6 +24,7 @@ print '<?xml version="1.0" encoding="UTF-8"?>';
 	// getBalance();
 ?>
 	<page version="2.0">
+		<title>Salio  </title>
 		<div>
 			Salio la ankaunti yako ni <?php getBalance(); ?> Tsh
 		</div>
