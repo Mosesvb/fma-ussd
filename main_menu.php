@@ -34,9 +34,10 @@ try {
 
 header('Content-Type: text/xml');
 print '<?xml version="1.0" encoding="UTF-8"?>';
+
 ?>
+<!-- <title protocol="wap java">Menu</title> -->
 <page version="2.0">
-	<div>
+<title protocol="wap java">Send money</title>
 		<?php echo $menu?>
-	</div>
 </page>
